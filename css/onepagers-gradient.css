@@ -366,3 +366,13 @@ S11. DEMO STYLES
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+.soft-beige h1,
+.soft-beige h2,
+.soft-beige h3,
+.soft-beige p {
+  color: #2b2b2b;
+}
+
+.soft-beige a {
+  color: #07363c;
+}
