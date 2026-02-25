@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ - Automated Dental Marketing for UK Dental Practices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            background-color: #07363c;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            margin-top: 25px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        a.demo-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a.demo-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Frequently Asked Questions About Automated Dental Marketing for UK Dental Practices</h2>
+
+        <h3>What is Automated Dental Marketing?</h3>
+        <p>Automated Dental Marketing uses technology to manage marketing campaigns, patient communications, and follow-ups automatically. It helps dental practices attract new patients and retain existing ones without manual effort.</p>
+
+        <h3>How does it help grow UK dental practices?</h3>
+        <p>The system automates email campaigns, SMS reminders, and social media messaging. It nurtures leads, encourages bookings, and increases patient retention, which leads to higher revenue and better ROI from marketing efforts.</p>
+
+        <h3>Is this system suitable for both NHS and private practices?</h3>
+        <p>Yes. Automated marketing works for NHS, private, and mixed practices, but it is especially powerful for high-value private treatments where patient engagement and timely follow-ups are critical.</p>
+
+        <h3>Can it integrate with my existing dental software?</h3>
+        <p>Yes. The system integrates with most UK dental practice management systems to ensure smooth workflow and accurate tracking of marketing campaigns.</p>
+
+        <h3>Does it handle patient follow-ups automatically?</h3>
+        <p>Yes. The platform automatically sends SMS, emails, or other communications based on patient activity, appointment reminders, or promotional campaigns to maximize engagement.</p>
+
+        <h3>How do I know if my marketing campaigns are working?</h3>
+        <p>The system provides detailed analytics on campaign performance, patient engagement, and conversion rates, helping your practice optimize strategies and marketing spend.</p>
+
+        <h3>Is it GDPR compliant?</h3>
+        <p>Absolutely. Automated Dental Marketing is designed to comply with UK GDPR standards, ensuring patient data is stored and processed securely.</p>
+
+        <h3>Will it replace my marketing team?</h3>
+        <p>No. It enhances your team’s efficiency by automating repetitive tasks, allowing your staff to focus on strategy and patient relationships.</p>
+
+        <h3>How quickly can the system be implemented?</h3>
+        <p>Implementation is fast and straightforward. Most UK dental practices can start running automated campaigns within days, with minimal disruption.</p>
+
+        <h3>Does it really help increase patient bookings?</h3>
+        <p>Yes. Automated campaigns improve lead nurturing, reduce no-shows, and encourage repeat appointments, resulting in higher overall bookings and revenue.</p>
+
+        <h3>How can I see the system in action?</h3>
+        <p>Book a free demo today and see how Automated Dental Marketing can help your practice grow: <a class="demo-link" href="https://calendly.com/patientacquisitionhub/30min">Book a Free Demo</a>.</p>
+    </div>
+</body>
+</html>
