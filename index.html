@@ -240,6 +240,67 @@ Our missed call recovery and patient acquisition system ensures every enquiry tu
 
       </script>
         <!-- Your website content above -->
+      <script>
+(function () {
+  const input = document.getElementById("ai-input");
+  const sendBtn = document.getElementById("ai-send");
+  const micBtn = document.getElementById("ai-mic");
+
+  let recognition;
+  let listening = false;
+
+  // Check if browser supports speech recognition
+  if ("webkitSpeechRecognition" in window) {
+    recognition = new webkitSpeechRecognition();
+    recognition.lang = "en-US";
+
+    recognition.onresult = function (event) {
+      input.value = event.results[0][0].transcript;
+      listening = false;
+    };
+
+    recognition.onend = function () {
+      listening = false;
+    };
+  }
+
+  // Handle mic button click (start/stop listening)
+  micBtn.onclick = function () {
+    if (!recognition) {
+      alert("Speech recognition not supported in this browser.");
+      return;
+    }
+
+    if (listening) {
+      recognition.stop();
+      listening = false;
+    } else {
+      recognition.start();
+      listening = true;
+    }
+  };
+
+  // Handle send button click
+  sendBtn.onclick = send;
+
+  // Handle Enter key for sending
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      send();
+    }
+  });
+
+  // Function to handle sending of input
+  function send() {
+    const text = input.value.trim();
+    if (!text) return;
+
+    alert("User asked: " + text); // Replace this with your actual API call
+    input.value = "";
+  }
+})();
+</script>
 </body>
 </html>
 
