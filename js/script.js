@@ -12,7 +12,7 @@ sendButton.addEventListener("click", async () => {
     userMessageInput.value = "";  // Clear the input field
 
     // Send the user message to the backend (server)
-    const response = await fetch("https://your-railway-deployment-url/api/chat", {  // Replace with your Railway app URL
+    const response = await fetch("https://pah-ai-server-production.up.railway.app/api/chat", {  // Replace with your Railway app URL
         method: "POST",
         headers: {
             "Content-Type": "application/json",
