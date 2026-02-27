@@ -236,6 +236,86 @@ Our missed call recovery and patient acquisition system ensures every enquiry tu
         <!-- Your website content above -->
 </body>
 </html>
+<script>
+(function () {
+  const container = document.getElementById("ai-search-bar");
 
+  container.innerHTML = `
+    <div style="
+      display:flex;
+      gap:10px;
+      padding:12px;
+      background:#222;
+      border-radius:14px;
+      max-width:500px;
+    ">
+      <textarea id="ai-input"
+        placeholder="Ask me anything..."
+        rows="1"
+        style="
+          flex:1;
+          resize:none;
+          border:none;
+          outline:none;
+          background:transparent;
+          color:white;
+          font-size:14px;
+        ">
+      </textarea>
+
+      <button id="ai-mic" style="padding:8px 12px;cursor:pointer;">🎤</button>
+      <button id="ai-send" style="padding:8px 12px;cursor:pointer;">➤</button>
+    </div>
+  `;
+
+  const input = document.getElementById("ai-input");
+  const micBtn = document.getElementById("ai-mic");
+  const sendBtn = document.getElementById("ai-send");
+
+  let recognition;
+  let listening = false;
+
+  if ("webkitSpeechRecognition" in window) {
+    recognition = new webkitSpeechRecognition();
+    recognition.lang = "en-US";
+
+    recognition.onresult = function (event) {
+      input.value = event.results[0][0].transcript;
+      listening = false;
+    };
+
+    recognition.onend = function () {
+      listening = false;
+    };
+  }
+
+  micBtn.onclick = function () {
+    if (!recognition) return alert("Speech not supported");
+
+    if (listening) {
+      recognition.stop();
+      listening = false;
+    } else {
+      recognition.start();
+      listening = true;
+    }
+  };
+
+  sendBtn.onclick = send;
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      send();
+    }
+  });
+
+  function send() {
+    const text = input.value.trim();
+    if (!text) return;
+    alert("You asked: " + text);
+    input.value = "";
+  }
+})();
+</script>
   </body>
 </html>
