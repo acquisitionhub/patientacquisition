@@ -192,5 +192,36 @@
             }
         });
     </script>
+    <script>
+const micBtn = document.querySelector('.mic-btn');
+const input = document.getElementById('ai-search');
+
+let recognition;
+
+if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
+
+    recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        input.value = transcript; // put voice text into input box
+    };
+
+    recognition.onerror = (event) => {
+        console.error('Speech recognition error', event);
+    };
+} else {
+    micBtn.disabled = true;
+    micBtn.title = "Speech recognition not supported";
+}
+
+// Start listening when mic button is clicked
+micBtn.addEventListener('click', () => {
+    if (recognition) recognition.start();
+});
+</script>
 </body>
 </html>
